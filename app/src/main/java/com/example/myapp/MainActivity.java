@@ -9,8 +9,8 @@ import androidx.appcompat.app.AppCompatActivity;
 public class MainActivity extends AppCompatActivity {
 
     EditText editText;
-    Button button;
     TextView textView;
+    Button button;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -18,8 +18,8 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
 
         editText = findViewById(R.id.editText);
-        button = findViewById(R.id.button);
         textView = findViewById(R.id.textView);
+        button = findViewById(R.id.button);
 
         button.setOnClickListener(v -> {
             String text = editText.getText().toString();
