@@ -2,26 +2,40 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:gravity="center"
-    android:orientation="vertical">
+    android:orientation="vertical"
+    android:background="@drawable/bg"
+    android:padding="20dp">
 
     <TextView
-        android:id="@+id/textView"
-        android:text="Sirohi App Ready 🚀"
-        android:textSize="24sp"
-        android:textColor="#000000"
+        android:text="🔥 Sirohi Gaming Hub"
+        android:textSize="26sp"
+        android:textColor="#FFFFFF"
+        android:layout_marginBottom="20dp"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"/>
 
     <EditText
         android:id="@+id/editText"
-        android:hint="Enter text"
+        android:hint="Enter your name"
+        android:textColor="#FFFFFF"
+        android:hintTextColor="#AAAAAA"
+        android:backgroundTint="#FFFFFF"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"/>
 
     <Button
         android:id="@+id/button"
-        android:text="Click"
+        android:text="Start"
+        android:layout_marginTop="20dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
+
+    <TextView
+        android:id="@+id/textView"
+        android:text=""
+        android:textColor="#FFFFFF"
+        android:textSize="18sp"
+        android:layout_marginTop="20dp"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"/>
 

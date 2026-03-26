@@ -16,11 +16,11 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
 
-        // ✅ Crash handler (सही जगह)
+        // ✅ Crash handler (safe & working)
         Thread.setDefaultUncaughtExceptionHandler((thread, throwable) -> {
             try {
                 java.io.FileWriter writer = new java.io.FileWriter("/sdcard/crash.txt", true);
-                writer.write(throwable.toString());
+                writer.write(android.util.Log.getStackTraceString(throwable));
                 writer.write("\n\n");
                 writer.close();
             } catch (Exception e) {
