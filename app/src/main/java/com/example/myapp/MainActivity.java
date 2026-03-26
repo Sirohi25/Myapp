@@ -15,6 +15,19 @@ public class MainActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+
+        // ✅ Crash handler (सही जगह)
+        Thread.setDefaultUncaughtExceptionHandler((thread, throwable) -> {
+            try {
+                java.io.FileWriter writer = new java.io.FileWriter("/sdcard/crash.txt", true);
+                writer.write(throwable.toString());
+                writer.write("\n\n");
+                writer.close();
+            } catch (Exception e) {
+                e.printStackTrace();
+            }
+        });
+
         setContentView(R.layout.activity_main);
 
         editText = findViewById(R.id.editText);
